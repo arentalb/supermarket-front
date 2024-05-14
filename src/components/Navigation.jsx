@@ -107,7 +107,7 @@ export function Navigation() {
                           </Link>
                         </li>
                         <li>
-                          <Link to={"admin/userList"}>
+                          <Link to={"admin/users"}>
                             <FiUsers />
                             Users
                           </Link>

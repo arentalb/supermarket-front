@@ -5,6 +5,8 @@ import { SignUpPage } from "./pages/auth/SignUpPage.jsx";
 import { LoginPage } from "./pages/auth/LoginPage.jsx";
 import { ProfilePage } from "./pages/user/ProfilePage.jsx";
 import { ProtectedRoute } from "./components/ProtectedRoute.jsx";
+import { AdminRoute } from "./pages/admin/AdminRoute.jsx";
+import { UsersPage } from "./pages/admin/UsersPage.jsx";
 
 function App() {
   return (
@@ -19,6 +21,9 @@ function App() {
             <Route path="/profile" element={<ProfilePage />} />
           </Route>
 
+          <Route path={"/admin"} element={<AdminRoute />}>
+            <Route path="users" element={<UsersPage />} />
+          </Route>
           <Route path="*" element={<p>Not Found</p>} />
         </Route>
       </Routes>
