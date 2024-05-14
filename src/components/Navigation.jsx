@@ -115,7 +115,7 @@ export function Navigation() {
                       </>
                     )}
                     <li>
-                      <Link to={"favorite"} className={"border-t-2"}>
+                      <Link to={"profile"} className={"border-t-2"}>
                         <FiUser />
                         <span>{userInfo.username}</span>
                       </Link>
