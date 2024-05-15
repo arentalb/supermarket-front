@@ -95,7 +95,7 @@ export function Navigation() {
                           </Link>
                         </li>
                         <li>
-                          <Link to={"admin/categoryList"}>
+                          <Link to={"admin/category"}>
                             <FiBook />
                             Category
                           </Link>

@@ -7,6 +7,7 @@ import { ProfilePage } from "./pages/user/ProfilePage.jsx";
 import { ProtectedRoute } from "./components/ProtectedRoute.jsx";
 import { AdminRoute } from "./pages/admin/AdminRoute.jsx";
 import { UsersPage } from "./pages/admin/UsersPage.jsx";
+import { CategoryPage } from "./pages/admin/CategoryPage.jsx";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
 
           <Route path={"/admin"} element={<AdminRoute />}>
             <Route path="users" element={<UsersPage />} />
+            <Route path="category" element={<CategoryPage />} />
           </Route>
           <Route path="*" element={<p>Not Found</p>} />
         </Route>
