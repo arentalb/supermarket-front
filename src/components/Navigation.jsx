@@ -89,7 +89,7 @@ export function Navigation() {
                           </Link>
                         </li>
                         <li>
-                          <Link to={"admin/productList"}>
+                          <Link to={"admin/product"}>
                             <FiBox />
                             Products
                           </Link>
