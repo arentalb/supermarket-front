@@ -1,16 +1,16 @@
 import { Route, Routes } from "react-router";
 import { BrowserRouter, Navigate } from "react-router-dom";
-import { AppLayout } from "./components/AppLayout.jsx";
+import { AppLayout } from "./components/common/AppLayout.jsx";
 import { SignUpPage } from "./pages/auth/SignUpPage.jsx";
 import { LoginPage } from "./pages/auth/LoginPage.jsx";
 import { ProfilePage } from "./pages/user/ProfilePage.jsx";
-import { ProtectedRoute } from "./components/ProtectedRoute.jsx";
-import { AdminRoute } from "./pages/admin/AdminRoute.jsx";
+import { ProtectedUserRoute } from "./pages/ProtectedUserRoute.jsx";
+import { ProtectedAdminRoute } from "./pages/ProtectedAdminRoute.jsx";
 import { UsersPage } from "./pages/admin/UsersPage.jsx";
 import { CategoryPage } from "./pages/admin/CategoryPage.jsx";
 import { ProductsPage } from "./pages/admin/ProductsPage.jsx";
-import { AllProducts } from "./components/AllProducts.jsx";
-import { ProductForm } from "./components/ProductForm.jsx";
+import { ProductList } from "./components/admin/ProductList.jsx";
+import { ProductForm } from "./components/admin/ProductForm.jsx";
 
 function App() {
   return (
@@ -21,16 +21,16 @@ function App() {
           <Route path="signup" element={<SignUpPage />} />
           <Route path="login" element={<LoginPage />} />
 
-          <Route element={<ProtectedRoute />}>
+          <Route element={<ProtectedUserRoute />}>
             <Route path="/profile" element={<ProfilePage />} />
           </Route>
 
-          <Route path={"/admin"} element={<AdminRoute />}>
+          <Route path={"/admin"} element={<ProtectedAdminRoute />}>
             <Route path="users" element={<UsersPage />} />
             <Route path="category" element={<CategoryPage />} />
             <Route path="product" element={<ProductsPage />}>
               <Route index element={<Navigate to="all" replace />} />
-              <Route path="all" element={<AllProducts />} />
+              <Route path="all" element={<ProductList />} />
               <Route path="new" element={<ProductForm />} />
               <Route path="edit/:id" element={<ProductForm />} />
             </Route>

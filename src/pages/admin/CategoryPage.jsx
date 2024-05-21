@@ -1,4 +1,4 @@
-import { CategoryList } from "../../components/CategoryList.jsx";
+import { CategoryList } from "../../components/admin/CategoryList.jsx";
 
 export function CategoryPage() {
   return (

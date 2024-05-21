@@ -1,4 +1,4 @@
-import { Navigation } from "./Navigation.jsx";
+import { Header } from "./Header.jsx";
 import { Outlet } from "react-router";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
@@ -6,7 +6,7 @@ import { ToastContainer } from "react-toastify";
 export function AppLayout() {
   return (
     <div className="max-w-[1200px] w-full mx-auto min-h-screen flex flex-col">
-      <Navigation />
+      <Header />
       <div className="max-w-[1100px] w-full mx-auto px-4">
         <Outlet />
       </div>

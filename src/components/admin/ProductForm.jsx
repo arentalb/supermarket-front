@@ -6,8 +6,8 @@ import {
   useDeleteProductMutation,
   useGetProductByIdQuery,
   useUpdateProductMutation,
-} from "../redux/api/productApiSlice.js";
-import { useGetCategoriesQuery } from "../redux/api/categoryApiAlice.js";
+} from "../../redux/api/productApiSlice.js";
+import { useGetCategoriesQuery } from "../../redux/api/categoryApiAlice.js";
 import { toast } from "react-toastify";
 
 export function ProductForm() {

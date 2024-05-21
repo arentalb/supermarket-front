@@ -1,4 +1,4 @@
-import { UserList } from "../../components/UserList.jsx";
+import { UserList } from "../../components/admin/UserList.jsx";
 
 export function UsersPage() {
   return (

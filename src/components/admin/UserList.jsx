@@ -1,9 +1,15 @@
 import { FiCheck, FiX } from "react-icons/fi";
-import { useGetUsersQuery } from "../redux/api/usersApiSlice.js";
+import { useGetUsersQuery } from "../../redux/api/usersApiSlice.js";
+import { toast } from "react-toastify";
 
 export function UserList() {
-  const { data, isLoading, error } = useGetUsersQuery();
+  const { data, isLoading, error, isError } = useGetUsersQuery();
   const users = data ? data.data : [];
+  if (isError) {
+    toast.error(
+      error?.data?.message || error.message || "Error fetching users",
+    );
+  }
 
   return (
     <>

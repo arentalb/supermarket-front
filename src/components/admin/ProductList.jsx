@@ -1,9 +1,9 @@
-import { useGetProductsQuery } from "../redux/api/productApiSlice.js";
+import { useGetProductsQuery } from "../../redux/api/productApiSlice.js";
 import moment from "moment";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
-export function AllProducts() {
+export function ProductList() {
   const { data, isLoading, error, isError } = useGetProductsQuery();
 
   const navigate = useNavigate();

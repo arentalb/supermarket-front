@@ -12,11 +12,11 @@ import {
   FiUsers,
 } from "react-icons/fi";
 import { useDispatch, useSelector } from "react-redux";
-import { getUserInfo, logOut } from "../redux/feature/auth/authSlice.js";
-import { useLogoutMutation } from "../redux/api/usersApiSlice.js";
+import { getUserInfo, logOut } from "../../redux/feature/auth/authSlice.js";
+import { useLogoutMutation } from "../../redux/api/usersApiSlice.js";
 import { toast } from "react-toastify";
 
-export function Navigation() {
+export function Header() {
   const userInfo = useSelector(getUserInfo);
   const dispatch = useDispatch();
   const navigate = useNavigate();

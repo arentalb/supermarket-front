@@ -3,7 +3,7 @@ import {
   useDeleteCategoryMutation,
   useGetCategoriesQuery,
   useUpdateCategoryMutation,
-} from "../redux/api/categoryApiAlice.js";
+} from "../../redux/api/categoryApiAlice.js";
 import { useState } from "react";
 import { toast } from "react-toastify";
 
