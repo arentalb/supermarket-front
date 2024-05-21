@@ -155,25 +155,25 @@ export function ProductForm() {
         {isEditMode ? "Edit Product" : "Create New Product"}
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-4 gap-x-2">
-        <label className="form-control w-full max-w-xs">
+        <label className="form-control w-full sm:max-w-xs">
           <div className="label">
             <span className="label-text">Product name</span>
           </div>
           <input
             type="text"
-            className="input input-bordered w-full max-w-xs"
+            className="input input-bordered w-full sm:max-w-xs"
             {...register("name", { required: "Product name is required" })}
           />
           {errors.name && <p className="text-red-500">{errors.name.message}</p>}
         </label>
 
-        <label className="form-control w-full max-w-xs">
+        <label className="form-control w-full sm:max-w-xs">
           <div className="label">
             <span className="label-text">Product brand</span>
           </div>
           <input
             type="text"
-            className="input input-bordered w-full max-w-xs"
+            className="input input-bordered w-full sm:max-w-xs"
             {...register("brand", { required: "Product brand is required" })}
           />
           {errors.brand && (
@@ -181,13 +181,13 @@ export function ProductForm() {
           )}
         </label>
 
-        <label className="form-control w-full max-w-xs">
+        <label className="form-control w-full sm:max-w-xs">
           <div className="label">
             <span className="label-text">Product quantity</span>
           </div>
           <input
             type="number"
-            className="input input-bordered w-full max-w-xs"
+            className="input input-bordered w-full sm:max-w-xs"
             {...register("quantity", {
               required: "Product quantity is required",
             })}
@@ -197,13 +197,13 @@ export function ProductForm() {
           )}
         </label>
 
-        <label className="form-control w-full max-w-xs">
+        <label className="form-control w-full sm:max-w-xs">
           <div className="label">
             <span className="label-text">Product price</span>
           </div>
           <input
             type="text"
-            className="input input-bordered w-full max-w-xs"
+            className="input input-bordered w-full sm:max-w-xs"
             {...register("price", { required: "Product price is required" })}
           />
           {errors.price && (
@@ -211,13 +211,13 @@ export function ProductForm() {
           )}
         </label>
 
-        <label className="form-control w-full max-w-xs">
+        <label className="form-control w-full sm:max-w-xs">
           <div className="label">
             <span className="label-text">Product count in stock</span>
           </div>
           <input
             type="number"
-            className="input input-bordered w-full max-w-xs"
+            className="input input-bordered w-full sm:max-w-xs"
             {...register("countInStock", {
               required: "Product count in stock is required",
             })}
@@ -227,7 +227,7 @@ export function ProductForm() {
           )}
         </label>
 
-        <label className="form-control w-full max-w-xs">
+        <label className="form-control w-full sm:max-w-xs">
           <div className="label">
             <span className="label-text">Product category</span>
           </div>
@@ -252,7 +252,7 @@ export function ProductForm() {
           )}
         </label>
 
-        <label className="form-control max-w-xs">
+        <label className="form-control sm:max-w-xs">
           <div className="label">
             <span className="label-text">Product description</span>
           </div>
@@ -268,13 +268,13 @@ export function ProductForm() {
         </label>
 
         <div>
-          <label className="form-control w-full max-w-xs mb-4">
+          <label className="form-control w-full sm:max-w-xs mb-4">
             <div className="label">
               <span className="label-text">Product image</span>
             </div>
             <input
               type="file"
-              className="file-input file-input-bordered w-full max-w-xs"
+              className="file-input file-input-bordered w-full sm:max-w-xs"
               {...register("image", {
                 required: isEditMode ? false : "Product image is required",
               })}
@@ -286,13 +286,13 @@ export function ProductForm() {
         </div>
       </div>
 
-      <div className={"mt-10 flex gap-4 flex-wrap"}>
+      <div className={"my-10 flex gap-4 flex-wrap "}>
         {isEditMode ? (
           <>
             <button
               type="button"
               onClick={handleSubmit(onEdit)}
-              className={`btn btn-success btn-wide `}
+              className={`btn btn-success w-full sm:max-w-xs `}
             >
               {isUpdating ? (
                 <span className="loading loading-spinner "></span>
@@ -303,7 +303,7 @@ export function ProductForm() {
             <button
               type="button"
               onClick={onDelete}
-              className={`btn btn-error btn-wide `}
+              className={`btn btn-error w-full sm:max-w-xs `}
             >
               {isDeleting ? (
                 <span className="loading loading-spinner "></span>
@@ -316,7 +316,7 @@ export function ProductForm() {
           <button
             type="button"
             onClick={handleSubmit(onCreate)}
-            className={`btn btn-active btn-neutral btn-wide `}
+            className={`btn btn-active btn-neutral  w-full sm:max-w-xs`}
           >
             {isCreating ? (
               <span className="loading loading-spinner "></span>

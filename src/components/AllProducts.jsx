@@ -34,35 +34,34 @@ export function AllProducts() {
           <span className="loading loading-spinner loading-lg"></span>
         </div>
       ) : (
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2  gap-4">
           {products?.map((pro) => (
             <div
               key={pro._id}
-              className="shadow-lg rounded-lg overflow-hidden flex gap-4 p-4 bg-white"
+              className="shadow-lg rounded-lg overflow-hidden flex flex-col md:flex-row gap-4 p-4 bg-white"
             >
-              <div className="w-2/4 max-h-80">
+              <div className="md:w-1/3 xl:w-1/4">
                 <img
                   src={pro.image}
                   alt={pro.name}
-                  className="object-cover h-full w-full rounded"
+                  className="object-cover h-28 md:h-full w-full rounded"
                 />
               </div>
-              <div className="flex flex-col justify-between w-3/4">
+              <div className="flex flex-col justify-between md:w-2/3 xl:w-3/4">
                 <div>
-                  <div className={"flex justify-between"}>
+                  <div className="flex justify-between">
                     <p className="text-lg font-semibold">{pro.name}</p>
                     <p className="text-sm text-gray-500">
                       {moment(pro.updatedAt).format("MMM Do YY")}
                     </p>
                   </div>
                   <p className="text-sm text-gray-600 mb-4">
-                    {pro.description.substring(0, 100)}
-                    {"  "}...
+                    {pro.description.substring(0, 100)} ...
                   </p>
                 </div>
                 <button
                   onClick={() => showDetailHandler(pro._id)}
-                  className="btn btn-primary btn-sm self-start"
+                  className="btn btn-primary btn-sm w-28 sm:w-36  self-start"
                 >
                   Edit
                 </button>
