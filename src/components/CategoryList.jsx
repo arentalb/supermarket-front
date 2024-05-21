@@ -98,7 +98,11 @@ export function CategoryList() {
               disabled={creating || categoryName === ""}
               onClick={createHandler}
             >
-              {creating ? "Creating" : "Create new"}
+              {creating ? (
+                <span className="loading loading-spinner "></span>
+              ) : (
+                "Create new"
+              )}
             </button>
           </div>
         </form>
@@ -139,7 +143,11 @@ export function CategoryList() {
               disabled={updating || selectedCategory.name === ""}
               onClick={updateHandler}
             >
-              {updating ? "Updating" : "Update"}
+              {updating ? (
+                <span className="loading loading-spinner "></span>
+              ) : (
+                "Update"
+              )}
             </button>
             <button
               className={"btn btn-error"}
@@ -147,7 +155,11 @@ export function CategoryList() {
               disabled={deleting || selectedCategory.name === ""}
               onClick={() => deleteHandler(selectedCategory._id)}
             >
-              {deleting ? "Deleting" : "Delete"}
+              {deleting ? (
+                <span className="loading loading-spinner "></span>
+              ) : (
+                "Delete"
+              )}
             </button>
           </div>
         )}
