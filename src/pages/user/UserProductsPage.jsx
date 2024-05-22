@@ -10,8 +10,6 @@ export function UserProductsPage() {
   const products = data?.data;
   const errormessage = error?.data?.message;
 
-  console.log(errormessage);
-
   return (
     <>
       {isLoading ? (
@@ -32,7 +30,7 @@ export function UserProductsPage() {
           )}
           {products && (
             <>
-              <h1 className="text-2xl mb-8">ALL PRODUCTS</h1>
+              <h1 className="text-lg sm:text-xl  md:text-2xl mb-8 uppercase">{`ALL ${category ? category : ""} PRODUCTS`}</h1>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid md:grid-cols-4 gap-4 mb-12">
                 {products.map((pro) => (
                   <div key={pro._id} className="flex-shrink-0 w-full md:w-auto">
