@@ -2,7 +2,6 @@ import { Link, useNavigate } from "react-router-dom";
 import {
   FiBook,
   FiBox,
-  FiHeart,
   FiHome,
   FiLogOut,
   FiPackage,
@@ -71,12 +70,6 @@ export function Header() {
                           <Link to={"cart"}>
                             <FiShoppingCart />
                             Cart
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to={"favorite"}>
-                            <FiHeart />
-                            Favorite
                           </Link>
                         </li>
                       </>

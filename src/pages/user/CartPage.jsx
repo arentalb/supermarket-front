@@ -59,7 +59,7 @@ export function CartPage() {
             />
           </div>
           <div className={"col-span-1"}>
-            <Link className={"btn btn-primary w-full"} to={"checkout"}>
+            <Link className={"btn btn-primary w-full"} to={"/checkout"}>
               checkout
             </Link>
           </div>

@@ -15,6 +15,7 @@ import { HomePage } from "./pages/user/HomePage.jsx";
 import { UserProductsPage } from "./pages/user/UserProductsPage.jsx";
 import { ProductDetailPage } from "./pages/user/ProductDetailPage.jsx";
 import { CartPage } from "./pages/user/CartPage.jsx";
+import { CheckoutPage } from "./pages/user/CheckoutPage.jsx";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <Route path="/products" element={<UserProductsPage />} />
             <Route path="/product/:id" element={<ProductDetailPage />} />
             <Route path="/cart" element={<CartPage />} />
+            <Route path="/checkout" element={<CheckoutPage />} />
           </Route>
 
           <Route path={"/admin"} element={<ProtectedAdminRoute />}>
