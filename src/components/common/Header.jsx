@@ -33,7 +33,7 @@ export function Header() {
   return (
     <div className="navbar bg-base-100">
       <div className="flex-1">
-        <a className="btn btn-ghost text-xl">Practice</a>
+        <a className="btn btn-ghost text-xl">SuperMarket</a>
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
@@ -51,7 +51,7 @@ export function Header() {
               <li>
                 <details>
                   <summary>{userInfo.isAdmin ? "Admin" : "Menu"}</summary>
-                  <ul className="p-2 bg-base-100 rounded-t-none">
+                  <ul className="-translate-x-10 z-50 p-2 bg-base-100 rounded-t-none">
                     {!userInfo.isAdmin ? (
                       <>
                         <li>
