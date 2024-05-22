@@ -11,18 +11,20 @@ import { CategoryPage } from "./pages/admin/CategoryPage.jsx";
 import { ProductsPage } from "./pages/admin/ProductsPage.jsx";
 import { ProductList } from "./components/admin/ProductList.jsx";
 import { ProductForm } from "./components/admin/ProductForm.jsx";
+import { HomePage } from "./pages/user/HomePage.jsx";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<AppLayout />}>
-          <Route index element={<p>homepage</p>} />
+          <Route index element={<Navigate to="home" replace />} />
           <Route path="signup" element={<SignUpPage />} />
           <Route path="login" element={<LoginPage />} />
 
           <Route element={<ProtectedUserRoute />}>
             <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/home" element={<HomePage />} />
           </Route>
 
           <Route path={"/admin"} element={<ProtectedAdminRoute />}>

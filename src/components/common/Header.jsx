@@ -62,9 +62,9 @@ export function Header() {
                           </Link>
                         </li>
                         <li>
-                          <Link to={"shop"}>
+                          <Link to={"products"}>
                             <FiShoppingBag />
-                            Shop
+                            products
                           </Link>
                         </li>
                         <li>
