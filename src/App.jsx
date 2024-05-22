@@ -16,6 +16,7 @@ import { UserProductsPage } from "./pages/user/UserProductsPage.jsx";
 import { ProductDetailPage } from "./pages/user/ProductDetailPage.jsx";
 import { CartPage } from "./pages/user/CartPage.jsx";
 import { CheckoutPage } from "./pages/user/CheckoutPage.jsx";
+import { ProtectedAuthorized } from "./pages/ProtectedAuthorized.jsx";
 
 function App() {
   return (
@@ -26,9 +27,12 @@ function App() {
           <Route path="signup" element={<SignUpPage />} />
           <Route path="login" element={<LoginPage />} />
 
-          <Route element={<ProtectedUserRoute />}>
+          <Route element={<ProtectedAuthorized />}>
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/home" element={<HomePage />} />
+          </Route>
+
+          <Route element={<ProtectedUserRoute />}>
             <Route path="/products" element={<UserProductsPage />} />
             <Route path="/product/:id" element={<ProductDetailPage />} />
             <Route path="/cart" element={<CartPage />} />
