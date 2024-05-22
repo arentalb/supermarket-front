@@ -4,8 +4,10 @@ import { PRODUCT_URL } from "../constant.js";
 const productApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     getProducts: builder.query({
-      query: () => ({
-        url: `${PRODUCT_URL}`,
+      query: (category) => ({
+        url: category
+          ? `${PRODUCT_URL}?category=${category}`
+          : `${PRODUCT_URL}`,
         method: "GET",
       }),
       providesTags: ["products"],
