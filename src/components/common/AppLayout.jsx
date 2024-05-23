@@ -10,7 +10,19 @@ export function AppLayout() {
       <div className="max-w-[1100px] w-full mx-auto px-4">
         <Outlet />
       </div>
-      <ToastContainer position="bottom-right" />
+      <ToastContainer
+        position="bottom-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={true}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        className="toast-mobile toast-desktop"
+        limit={2}
+      />
     </div>
   );
 }

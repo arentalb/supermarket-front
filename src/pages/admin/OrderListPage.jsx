@@ -30,7 +30,7 @@ export function OrderListPage() {
                 <th>{index + 1}</th>
                 <td>{order._id}</td>
                 <td>{order.userId.email}</td>
-                <td>${order.totalPrice}</td>
+                <td>{order.totalPrice} IQD</td>
                 <td>{order.isPaid ? "Yes" : "No"}</td>
                 <td>{order.isDelivered ? "Yes" : "No"}</td>
                 <td>

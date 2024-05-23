@@ -30,7 +30,7 @@ export function UserProductsPage() {
           )}
           {products && (
             <>
-              <h1 className="text-lg sm:text-xl  md:text-2xl mb-8 uppercase">{`ALL ${category ? category : ""} PRODUCTS`}</h1>
+              <h1 className=" uppercase text-3xl font-bold mb-6">{`ALL ${category ? category : ""} PRODUCTS`}</h1>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid md:grid-cols-4 gap-4 mb-12">
                 {products.map((pro) => (
                   <div key={pro._id} className="flex-shrink-0 w-full md:w-auto">
@@ -56,7 +56,7 @@ function NewProduct({ pro }) {
         <img
           src={pro.image}
           alt={pro.name}
-          className="object-cover h-28  w-full rounded"
+          className="object-cover h-56 md:h-28   w-full rounded"
         />
       </div>
       <div className="flex  justify-between   py-4">

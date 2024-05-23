@@ -8,6 +8,7 @@ import {
   FiShoppingBag,
   FiShoppingCart,
   FiUser,
+  FiUsers,
 } from "react-icons/fi";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserInfo, logOut } from "../../redux/feature/auth/authSlice.js";
@@ -80,12 +81,12 @@ export function Header() {
                       </>
                     ) : (
                       <>
-                        <li>
-                          <Link to={"admin/dashboard"}>
-                            <FiHome />
-                            Dashboard
-                          </Link>
-                        </li>
+                        {/*<li>*/}
+                        {/*  <Link to={"admin/dashboard"}>*/}
+                        {/*    <FiHome />*/}
+                        {/*    Dashboard*/}
+                        {/*  </Link>*/}
+                        {/*</li>*/}
                         <li>
                           <Link to={"admin/product"}>
                             <FiBox />
@@ -102,6 +103,12 @@ export function Header() {
                           <Link to={"admin/orders"}>
                             <FiPackage />
                             Orders
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to={"admin/users"}>
+                            <FiUsers />
+                            Users
                           </Link>
                         </li>
                       </>

@@ -51,18 +51,18 @@ export function CheckoutPage() {
           <div key={item.productId} className="flex justify-between mb-2">
             <div>{item.name}</div>
             <div>
-              {item.quantity} x ${item.price}
+              {item.quantity} x {item.price} IQD
             </div>
           </div>
         ))}
         <div className="flex justify-between font-bold">
           <div>Total</div>
           <div>
-            $
             {cart.items.reduce(
               (acc, item) => acc + item.price * item.quantity,
               0,
-            )}
+            )}{" "}
+            IQD
           </div>
         </div>
       </div>

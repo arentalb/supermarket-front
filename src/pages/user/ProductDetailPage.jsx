@@ -148,7 +148,7 @@ function RightColumn({
         <strong>Category:</strong> {product.category.name}
       </p>
       <p className="text-lg text-gray-600">
-        <strong>Price:</strong> ${product.price}
+        <strong>Price:</strong> {product.price} IQD
       </p>
       <div className="md:hidden block">
         <p className="text-lg text-gray-600">

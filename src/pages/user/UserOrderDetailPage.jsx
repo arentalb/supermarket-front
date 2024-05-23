@@ -19,21 +19,21 @@ export function UserOrderDetailPage() {
           <thead>
             <tr>
               <th></th>
-              <th>Total</th>
               <th>Shipping Address</th>
               <th>Payment Method</th>
               <th>Paid</th>
               <th>Delivered</th>
+              <th>Total</th>
             </tr>
           </thead>
           <tbody>
             <tr key={order._id}>
               <th>1</th>
-              <td>{order.totalPrice}</td>
               <td>{order.shippingAddress}</td>
               <td>{order.paymentMethod}</td>
               <td>{order.isPaid ? "Yes" : "No"}</td>
               <td>{order.isDelivered ? "Yes" : "No"}</td>
+              <td>{order.totalPrice} IQD</td>
             </tr>
           </tbody>
         </table>
@@ -56,8 +56,8 @@ export function UserOrderDetailPage() {
                 <th>{index + 1}</th>
                 <td>{item.name}</td>
                 <td>{item.quantity}</td>
-                <td>${item.price}</td>
-                <td>${item.price * item.quantity}</td>
+                <td>{item.price} IQD</td>
+                <td>{item.price * item.quantity} IQD</td>
               </tr>
             ))}
           </tbody>

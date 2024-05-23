@@ -26,7 +26,7 @@ const orderApiSlice = apiSlice.injectEndpoints({
         method: "PUT",
         body: updateData,
       }),
-      invalidatesTags: (result, error, { id }) => [{ type: "Order", id }],
+      invalidatesTags: ["Order"],
     }),
     //user section
     getUserOrders: builder.query({
@@ -49,7 +49,7 @@ const orderApiSlice = apiSlice.injectEndpoints({
         method: "POST",
         body: { shippingAddress },
       }),
-      invalidatesTags: ["Cart", "Order"],
+      invalidatesTags: ["Cart", "Order", "UserOrder"],
     }),
   }),
 });
