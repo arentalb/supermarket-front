@@ -17,6 +17,8 @@ import { ProductDetailPage } from "./pages/user/ProductDetailPage.jsx";
 import { CartPage } from "./pages/user/CartPage.jsx";
 import { CheckoutPage } from "./pages/user/CheckoutPage.jsx";
 import { ProtectedAuthorized } from "./pages/ProtectedAuthorized.jsx";
+import { OrderListPage } from "./pages/admin/OrderListPage.jsx";
+import { OrderDetailPage } from "./pages/admin/OrderDetailPage.jsx";
 
 function App() {
   return (
@@ -42,6 +44,8 @@ function App() {
           <Route path={"/admin"} element={<ProtectedAdminRoute />}>
             <Route path="users" element={<UsersPage />} />
             <Route path="category" element={<CategoryPage />} />
+            <Route path="orders" element={<OrderListPage />} />
+            <Route path="orders/:id" element={<OrderDetailPage />} />
             <Route path="product" element={<ProductsPage />}>
               <Route index element={<Navigate to="all" replace />} />
               <Route path="all" element={<ProductList />} />

@@ -94,7 +94,7 @@ export function Header() {
                           </Link>
                         </li>
                         <li>
-                          <Link to={"admin/orderList"}>
+                          <Link to={"admin/orders"}>
                             <FiPackage />
                             Orders
                           </Link>
