@@ -1,13 +1,13 @@
 import { toast } from "react-toastify";
 import {
-  useGetOrderByIdQuery,
+  useGetOrderDetailQuery,
   useUpdateOrderStatusMutation,
-} from "../../redux/api/checkoutApiSlice.js";
+} from "../../redux/api/orderApiSlice.js";
 import { useParams } from "react-router-dom";
 
 export function OrderDetailPage() {
   const { id } = useParams();
-  const { data, error, isLoading } = useGetOrderByIdQuery(id);
+  const { data, error, isLoading } = useGetOrderDetailQuery(id);
   const [updateOrderStatus] = useUpdateOrderStatusMutation();
 
   const order = data?.data;

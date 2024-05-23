@@ -1,4 +1,4 @@
-import { useCreateOrderFromCartMutation } from "../../redux/api/checkoutApiSlice.js";
+import { useCreateUserOrderMutation } from "../../redux/api/orderApiSlice.js";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { useGetCartQuery } from "../../redux/api/cartApiSlice.js";
@@ -12,7 +12,7 @@ export function CheckoutPage() {
   } = useGetCartQuery();
 
   const [createOrderFromCart, { isLoading: isCreatingOrder }] =
-    useCreateOrderFromCartMutation();
+    useCreateUserOrderMutation();
   const [shippingAddress, setShippingAddress] = useState("");
 
   const cart = cartData?.data;

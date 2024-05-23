@@ -9,6 +9,7 @@ const userApiSlice = apiSlice.injectEndpoints({
         method: "POST",
         body: data,
       }),
+      invalidatesTags: ["UserOrder", "Order", "Cart"],
     }),
     logout: builder.mutation({
       query: () => ({

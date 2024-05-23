@@ -19,6 +19,8 @@ import { CheckoutPage } from "./pages/user/CheckoutPage.jsx";
 import { ProtectedAuthorized } from "./pages/ProtectedAuthorized.jsx";
 import { OrderListPage } from "./pages/admin/OrderListPage.jsx";
 import { OrderDetailPage } from "./pages/admin/OrderDetailPage.jsx";
+import { UserOrdersPage } from "./pages/user/UserOrdersPage.jsx";
+import { UserOrderDetailPage } from "./pages/user/UserOrderDetailPage.jsx";
 
 function App() {
   return (
@@ -39,6 +41,8 @@ function App() {
             <Route path="/product/:id" element={<ProductDetailPage />} />
             <Route path="/cart" element={<CartPage />} />
             <Route path="/checkout" element={<CheckoutPage />} />
+            <Route path="/orders" element={<UserOrdersPage />} />
+            <Route path="/orders/:id" element={<UserOrderDetailPage />} />
           </Route>
 
           <Route path={"/admin"} element={<ProtectedAdminRoute />}>
