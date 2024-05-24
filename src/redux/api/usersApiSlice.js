@@ -1,6 +1,6 @@
 import { USERS_URL } from "../constant.js";
 import apiSlice from "../apiSlice.js";
-import { setCredentials } from "../feature/auth/authSlice.js";
+import { logOut, setCredentials } from "../feature/auth/authSlice.js";
 
 const userApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
