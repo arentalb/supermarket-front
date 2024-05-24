@@ -1,5 +1,6 @@
 import { USERS_URL } from "../constant.js";
 import apiSlice from "../apiSlice.js";
+import { setCredentials } from "../feature/auth/authSlice.js";
 
 const userApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
@@ -10,12 +11,28 @@ const userApiSlice = apiSlice.injectEndpoints({
         body: data,
       }),
       invalidatesTags: ["UserOrder", "Order", "Cart"],
+      async onQueryStarted(arg, { dispatch, queryFulfilled }) {
+        try {
+          const { data } = await queryFulfilled;
+          dispatch(setCredentials(data));
+        } catch (error) {
+          console.log(error);
+        }
+      },
     }),
     logout: builder.mutation({
       query: () => ({
         url: `${USERS_URL}/logout`,
         method: "POST",
       }),
+      async onQueryStarted(arg, { dispatch, queryFulfilled }) {
+        try {
+          await queryFulfilled;
+          dispatch(logOut());
+        } catch (error) {
+          console.log(error);
+        }
+      },
     }),
     signup: builder.mutation({
       query: (data) => ({
@@ -23,6 +40,14 @@ const userApiSlice = apiSlice.injectEndpoints({
         method: "POST",
         body: data,
       }),
+      async onQueryStarted(arg, { dispatch, queryFulfilled }) {
+        try {
+          const { data } = await queryFulfilled;
+          dispatch(setCredentials(data));
+        } catch (error) {
+          console.log(error);
+        }
+      },
     }),
     updateProfile: builder.mutation({
       query: (data) => ({
