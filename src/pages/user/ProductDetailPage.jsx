@@ -8,6 +8,7 @@ import {
   useGetCartQuery,
   useUpdateCartItemMutation,
 } from "../../redux/api/cartApiSlice.js";
+import { getFullImageUrl } from "../../getFullImageUrl.js";
 
 export function ProductDetailPage() {
   const { id } = useParams();
@@ -118,7 +119,7 @@ function LeftColumn({ product }) {
   return (
     <div className="w-full md:w-1/2">
       <img
-        src={product.image}
+        src={getFullImageUrl(product.image)}
         alt={product.name}
         className="w-full rounded-lg shadow-md"
       />

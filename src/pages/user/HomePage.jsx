@@ -2,6 +2,7 @@ import { useGetNewProductsQuery } from "../../redux/api/productApiSlice.js";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { useGetCategoriesQuery } from "../../redux/api/categoryApiAlice.js";
+import { getFullImageUrl } from "../../getFullImageUrl.js";
 
 export function HomePage() {
   const {
@@ -116,7 +117,7 @@ function NewProduct({ pro }) {
     >
       <div className="w-full">
         <img
-          src={pro.image}
+          src={getFullImageUrl(pro.image)}
           alt={pro.name}
           className="object-cover h-28  w-full rounded"
         />

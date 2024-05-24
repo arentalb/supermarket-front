@@ -6,6 +6,7 @@ import {
 } from "../../redux/api/cartApiSlice.js";
 import { FiMinus, FiPlus } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import { getFullImageUrl } from "../../getFullImageUrl.js";
 
 export function CartPage() {
   const {
@@ -105,7 +106,7 @@ function CartItem({ item, handleUpdateCartItem, handleRemoveCartItem }) {
     <div className="flex justify-between sm:items-center items-start flex-col sm:flex-row p-4 border  rounded-lg shadow-md">
       <div className="flex items-center space-x-4 mb-4 sm:mb-0">
         <img
-          src={item.image}
+          src={getFullImageUrl(item.image)}
           alt={item.name}
           className="w-20 h-20 object-cover rounded-lg"
         />

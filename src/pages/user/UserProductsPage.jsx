@@ -1,5 +1,6 @@
 import { useGetProductsQuery } from "../../redux/api/productApiSlice.js";
 import { Link, useLocation } from "react-router-dom";
+import { getFullImageUrl } from "../../getFullImageUrl.js";
 
 export function UserProductsPage() {
   const location = useLocation();
@@ -54,7 +55,7 @@ function NewProduct({ pro }) {
     >
       <div className="w-full">
         <img
-          src={pro.image}
+          src={getFullImageUrl(pro.image)}
           alt={pro.name}
           className="object-cover h-56 md:h-28   w-full rounded"
         />

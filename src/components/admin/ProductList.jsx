@@ -2,6 +2,7 @@ import { useGetProductsQuery } from "../../redux/api/productApiSlice.js";
 import moment from "moment";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { getFullImageUrl } from "../../getFullImageUrl.js";
 
 export function ProductList() {
   const { data, isLoading, error, isError } = useGetProductsQuery();
@@ -42,7 +43,7 @@ export function ProductList() {
             >
               <div className="md:w-1/3 xl:w-1/4">
                 <img
-                  src={pro.image}
+                  src={getFullImageUrl(pro.image)}
                   alt={pro.name}
                   className="object-cover h-28 md:h-full w-full rounded"
                 />
