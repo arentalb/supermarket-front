@@ -1,5 +1,5 @@
 # Supermarket E-Commerce  - Frontend
-Welcome to the frontend repository for the E-Commerce Platform! This project is developed using the MERN stack (MongoDB, Express.js, React, Node.js) along with Tailwind CSS, DaisyUI, Redux, and RTK Query for state management and API interactions.
+Welcome to the frontend repository for the Supermarket E-Commerce ! This project is developed using the MERN stack (MongoDB, Express.js, React, Node.js) along with Tailwind CSS, DaisyUI, Redux, and RTK Query for state management and API interactions.
 
 Also, you can check out the backend repository for this frontend at https://github.com/arentalb/supermarket-back
 
